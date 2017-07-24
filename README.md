@@ -1,0 +1,2 @@
+# JavaScript
+Examples of JavaScript
