@@ -1,0 +1,37 @@
+<html>
+<body>
+  <script>
+  /*
+  allows you to protect any variables that you have in your
+  modules from any global scoped variables.	This is really
+  important because in any module, you might be using some
+  variables that are already used by other things in that application.
+
+  we already know that we can easily encapsulate our functions within
+  parentheses, and that protects all the variables inside those
+  functions from the global scope.	But what if we want access to
+  those variables from within our application? To do that, we need
+  to create a variable and assign it to our self-executing function.
+  And that way we'll have access to things inside it.
+  */
+
+  //The variable 'ray' has been namespaced
+  var ray = (function() {
+  /*access 'ray' with a return statement
+  instead of returning a statement, we can return an object, and through the object we can create variables and functions.
+  */
+  return {
+    speak: function() {
+      console.log('hello');
+    }
+  };
+}) () ;
+
+//Call the function with dot notation
+ray.speak();
+/*
+Now you can access that module from within your main application, while protecting all namespaces.
+*/
+</script>
+</body>
+</html>

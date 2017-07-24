@@ -1,0 +1,37 @@
+<html>
+<body>
+<script>
+/* create object method
+This is a function inside the object that changes
+data within the object's properties
+*/
+
+//create object named 'course'
+var course = new Object();
+
+//shorthand to create properties
+var course = {
+    title: "JavaScript Essential Training",
+    instructor: "Name of teacher",
+    level: 1,
+    views: 0,
+    //create method named updateView
+    updateViews: function() {
+      return ++course.views;
+    }
+}
+
+//retrieve specific properties.
+//This outputs 0
+console.log(course.views);
+
+//run the object's method
+course.updateViews();
+
+//view new value of the views property
+//This outputs 1
+console.log(course.views);
+
+</script>
+</body>
+</html>

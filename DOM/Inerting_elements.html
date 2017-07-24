@@ -1,0 +1,50 @@
+<html>
+<body>
+  <figure class="featured-image">
+    <img src="bluepebble.jpg" alt="Earthrise">
+  </figure>
+
+<script>
+//Create 2 constants
+/*
+I'm using the FEATURED constant as my reference for the query selector
+for the image. This is a great way of burrowing into DOM elements without
+having to traverse the entire DOM tree every time.
+*/
+const FEATURED = document.querySelector(".featured-image");
+const THEIMAGE = FEATURED.querySelector("img");
+
+//get image alt attribute
+var altText = THEIMAGE.getAttribute("alt");
+console.log(altText);
+
+//create figcaption element
+/*
+This creates a <figcaption> tag that is not placed anywhere
+in the document. It's just sitting in the memory of the browser.
+*/
+var captionElement = document.createElement("figcaption");
+console.log(captionElement);
+
+//create a Text Node to hold our Alt text and place that in a new variable.
+var captionText = document.createTextNode(altText);
+console.log(captionText);//this prints "Earthrise"
+
+//open this caption Text Node inside the caption element.
+captionElement.appendChild(captionText);
+console.log(captionElement);//This prints <figcaption>Earthrise</figcaption>
+
+//Check devtools and you'll see the <figcaption) with the altText attribute
+
+//append our new fig caption to the featured image figure.
+FEATURED.appendChild(captionElement);//This prints 'Earthrise' to the page,
+
+/*
+Set attribute Alt to nothing. This just blanks out the Alt attributes,
+so we're not repeating the text twice for screen readers.
+*/
+THEIMAGE.setAttribute("alt","");
+//Check dev tools and you'll see <img src="bluepebble.jpg" alt>
+</script>
+</body>
+</html>

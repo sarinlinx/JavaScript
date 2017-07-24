@@ -1,0 +1,28 @@
+<html>
+<body>
+  <script>
+  /*
+  In JavaScript functions are object methods.
+  If a function is not a method of a JavaScript object,
+  it is a function of the global object
+  The example below creates an object with 3 properties
+  (firstName, lastName, fullName).
+
+  The fullName property is a method. The person object is
+  the owner of the method.
+  The fullName property is a method of the person object.
+  */
+
+  var person = {
+    firstName:"John",
+    lastName: "Doe",
+    fullName: function () {
+      return this.firstName + " " + this.lastName;
+    }
+  }
+
+  // Will return "John Doe"
+  console.log(person.fullName());
+</script>
+</body>
+<html>

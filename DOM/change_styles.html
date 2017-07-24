@@ -1,0 +1,30 @@
+<html>
+<head>
+  <style>
+  .cta {
+    background-color: red;
+    color: white;
+  }
+
+  a {
+    color: blue;
+  }
+  </style>
+</head>
+<body>
+<p class="cta">Hi Hi Hi<br>
+  <a href="#">My super cool link</a>
+</p>
+
+  <script>
+  //Changes text color for link inside "cta" class
+document.querySelector(".cta a").style.color = "yellow";
+//Use camel ase when CSS has two words
+document.querySelector(".cta a").style.backgroundColor = "gray";
+
+//Add CSS styles
+document.querySelector(".cta a").style.cssText =
+  "padding: 1em; color: white; background-color: red;"
+</script>
+</body>
+</html>

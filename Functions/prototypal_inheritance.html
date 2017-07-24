@@ -1,0 +1,34 @@
+<html>
+<body>
+<script>
+/*
+That means that you can base the functionality of an object on another object.
+prototype objects gives you access to other objects
+*/
+
+var speak = function(a) {
+  console.log(a);
+  }
+
+var Dog = function() {
+  var name, breed;
+ }
+
+//This adds 'speak' method to the 'Dog' object
+ Dog.prototype.speak = speak;
+
+  firstDog = new Dog;
+  firstDog.name = "Rover";
+  firstDog.breed = "Doberman";
+  //pass the method and give it a value
+  firstDog.speak('woof');
+  //console.log returns 'woof'
+
+  /*
+  In your console, run firstDog
+You see a list of its properties
+NOTE: How it inherited the function 'speak'
+*/
+</script>
+</body>
+</html>

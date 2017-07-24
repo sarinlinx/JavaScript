@@ -1,0 +1,37 @@
+<html>
+<body>
+  <script>
+  /*
+  working with multiple methods	allows one function
+  to call another
+  */
+  var ray = (function() {
+  var DEFAULTS = {
+    say: 'hello',
+    speed: 'normal',
+    }
+
+  return {
+    speak: function() {
+    var myArguments = arguments[0] || '';
+    var statement = myArguments.say || DEFAULTS.say;
+    console.log('statement');
+    },
+    run : function() {
+    var myArguments = arguments[0] || '';
+    var running = myArguments.speed || DEFAULTS.speed;
+    console.log('running...' + running);
+    }
+  };
+}) () ;
+</script>
+</body>
+<script>
+ray.speak(
+  { say: 'howdy' }
+);
+ray.speed(
+  { speed: 'fast' }
+);
+</script>
+</html>

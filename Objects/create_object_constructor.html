@@ -1,0 +1,39 @@
+<html>
+<body>
+<script>
+/*
+Create an object constructor
+Object Constructors are templates for creating
+objects that we define once and then we can
+use those templates again and again.
+*/
+
+ //The name must be CAPITAL
+ function Course(title,instructor,level,views) {
+
+  /*this' keyword refers to the current object
+  since we're making new objects and don't know
+  the name of them yet. Then we assign each of
+  the properties inside the object to the matching argument.
+  */
+    this.title = title;
+    this.instructor = instructor;
+    this.level = level;
+    this.views = views;
+    this.updateViews = function() {
+        return ++this.views;
+    }
+}
+
+//Use the constructor to create new instances of the 'Course' object
+var course01 = new Course("JavaScript Essential Training", "Teacher Name", 1, 0);
+console.log(course01);
+
+//Example, create a new course with different information, but same properties
+var course02 = new Course("New course name", "other teacher Name", 3, 1234);
+console.log(course01);
+console.log(course02);
+
+</script>
+</body>
+</html>

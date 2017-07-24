@@ -1,0 +1,21 @@
+<html>
+<body>
+  <ul id ="grid">
+  <li><a href="google.com"><img src"green.gif" alt="green" id="green"></a></li>
+  <li><a href="google.com"><img src"red.gif" alt="red" id="red"></a></li>
+  <li><a href="google.com"><img src"pink.gif" alt="pink" id="pink"></a></li>
+  </ul>
+
+
+  <script>
+  document.getElementById('grid').addEventListener('click', function(e) {
+/*Clicking any element in the grid normally opens the link.
+  But preventDefault() stops this default behavior
+  When you click inside the list, only 'Clicked inside UL' is returned.
+*/
+    e.preventDefault();
+    console.log("Clicked inside UL");
+  } , false);
+  </script>
+</body>
+</html>

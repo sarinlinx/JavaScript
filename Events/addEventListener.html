@@ -1,0 +1,29 @@
+<html>
+<body>
+<li><img src"pink.gif" alt="pink" id="pink"></li>
+
+<script>
+//Example of a click event
+/*
+get element
+add 'addEventListener'
+pass along type of event you want (click)
+*/
+document.getElementById('pink').addEventListener('click', function() {
+  alert("you clicked on pink");
+} , false);
+
+//Example of viewing the event object
+/*
+Once you register and capture an event, you'll receive an event object
+back from the browser.
+*/
+document.getElementById('pink').addEventListener('click', function(e) {
+  console.log(e);
+} , false);
+
+
+</script>
+
+</body>
+</html>

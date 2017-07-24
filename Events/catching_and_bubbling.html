@@ -1,0 +1,33 @@
+<html>
+<body>
+  <ul id ="grid">
+<li><img src"green.gif" alt="green" id="green"></li>
+<li><img src"red.gif" alt="red" id="red"></li>
+<li><img src"pink.gif" alt="pink" id="pink"></li>
+</ul>
+
+<script>
+document.getElementById('grid').addEventListener('click', function(e) {
+  console.log("Clicked inside UL");
+} , false);
+
+//setting 'false' causes the event to bubble UP
+//
+document.getElementById('pink').addEventListener('click', function(e) {
+  console.log(e.toElement.alt);
+} , false);
+
+/*
+If you click the pink element, the console outputs
+pink
+Clicked inside UL
+
+If uou change it both to 'true' and click the pink element
+The console outputs
+
+Clicked inside UL
+pink
+*/
+</script>
+</body>
+</html>

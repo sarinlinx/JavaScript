@@ -1,0 +1,67 @@
+<html>
+<head>
+<style>
+body {
+  font: normal 15px/15px Helvetica;
+  background: #249286;
+}
+
+ul.player {
+  width: 180px;
+  margin: 0 auto;
+  margin-top: 100px;
+  list-style: none;
+}
+
+ul.player li {
+  border-bottom: 1px solid #999;
+  color: #444;
+  padding: 9px 5px 10px 40px;
+  background: url(media_btn.png) no-repeat 8px 7px;
+  background-color: #EAE3CB;
+  background-position: 9px 4px;
+  cursor: pointer;
+}
+
+ul.player li:first-child {
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  border-top: none;
+}
+
+ul.player li:last-child {
+  -webkit-border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  border-bottom: none;
+}
+
+ul.player li:hover {
+  background-color: #475B62;
+  color: #FCF4DC;
+}
+
+ul.player li#playing {
+  background: url(media_play_btn.png) no-repeat 8px 7px;
+  background-color: #FCF4DC;
+  color: #2176C7;
+  font-weight: bold;
+  background-position: 9px 4px;
+}
+
+ul.player li#paused {
+  background: url(media_pause_btn.png) no-repeat 8px 7px;
+  background-color: #666;
+  color: #FFF;
+  font-weight: bold;
+  background-position: 9px 4px;
+}
+</style>
+</head>
+<body>
+  <ul class="player">
+    <li data-src="Song1.mp3">Song1</li>
+    <li data-src="Song2.mp3">Song2</li>
+    <li data-src="Song3.mp3">Song3</li>
+  </ul>
+  <script src="script.js"</script>
+  </body>

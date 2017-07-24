@@ -1,0 +1,29 @@
+<html>
+<body>
+  <ul id="grid">
+    <li><img src"green.gif" alt="green" id="green"></li>
+    <li><img src"red.gif"   alt="red"   id="red"></li>
+    <li><img src"pink.gif"  alt="pink"  id="pink"></li>
+  </ul>
+
+  <script>
+  /*
+  event propagation lets you have a single element capture all the events of its
+  children elements. Event propagation is the reason you want to
+  use the newer addEventListener model
+  */
+  /*
+  Do 'something' when a user clicks on ANY of these elements.
+ In the older model you would have to create an event listener
+ for each item on the list.
+ */
+  document.getElementById('grid').addEventListener('click', function(e) {
+    console.log(e);
+    //output the toElement
+    //The toElement is the object being moved to by the mouse
+    //This outputs the alt attribute of the element you clicked
+    console.log(e.toElement.alt);
+  } , false);
+  </script>
+  </body>
+  </html>

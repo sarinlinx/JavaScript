@@ -1,0 +1,23 @@
+<html>
+<body>
+  <ul id ="grid">
+<li><img src"green.gif" alt="green" id="green"></li>
+<li><img src"red.gif" alt="red" id="red"></li>
+<li><img src"pink.gif" alt="pink" id="pink"></li>
+</ul>
+
+<script>
+document.getElementById('grid').addEventListener('click', function(e) {
+  console.log("Clicked inside UL");
+} , false);
+
+//use the stopPropataion() method to top the event
+document.getElementById('pink').addEventListener('click', function(e) {
+  console.log(e.toElement.alt);
+  //When you click on the pink option, the console only returns 'pink',
+  //It doesn't also return 'Click inside UL'
+  e.stopPropagation();
+} , false);
+</script>
+</body>
+</html>
